@@ -1,0 +1,58 @@
+import type { Cause } from "../types";
+
+export const causes: Cause[] = [
+  {
+    id: 1,
+    category: "Nutrition",
+    title: "Daily Meals for 500 Children",
+    description: "Providing nutritious school lunches across rural districts.",
+    image: "/causes/meals.jpg",
+    raised: 23400,
+    goal: 30000,
+  },
+  {
+    id: 2,
+    category: "Clean Water",
+    title: "Wells for 12 Villages",
+    description: "Building sustainable water access in drought-hit regions.",
+    image: "/causes/water.jpg",
+    raised: 16500,
+    goal: 30000,
+  },
+  {
+    id: 3,
+    category: "Education",
+    title: "Books & Bags for 800 Kids",
+    description: "Full school kits ahead of the new academic year.",
+    image: "/causes/books.jpg",
+    raised: 18400,
+    goal: 20000,
+  },
+  {
+    id: 4,
+    category: "Healthcare",
+    title: "Mobile Health Clinics",
+    description: "Free checkups and medicine for remote communities.",
+    image: "/causes/health.jpg",
+    raised: 12300,
+    goal: 30000,
+  },
+  {
+    id: 5,
+    category: "Emergency Relief",
+    title: "Flood Relief Fund",
+    description: "Shelter, food and blankets for displaced families.",
+    image: "/causes/flood.jpg",
+    raised: 19800,
+    goal: 30000,
+  },
+  {
+    id: 6,
+    category: "Elder Care",
+    title: "Warm Homes for Elders",
+    description: "Companionship, meals and care for isolated seniors.",
+    image: "/causes/elders.jpg",
+    raised: 8100,
+    goal: 24000,
+  },
+];
