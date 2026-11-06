@@ -27,6 +27,14 @@ h6,
   font-family: var(--font-title);
 }
 
+/* Suite nav */
+
+.navbar {
+  --bs-navbar-color: #0f172a;
+  --bs-navbar-hover-color: var(--brand-600);
+  --bs-navbar-active-color: var(--brand-600);
+}
+
 /* suite */
 
 .btn-gradient {
@@ -62,14 +70,6 @@ h6,
   border-radius: 0.75rem;
 }
 
-/* Suite nav */
-
-.navbar {
-  --bs-navbar-color: #0f172a;
-  --bs-navbar-hover-color: var(--brand-600);
-  --bs-navbar-active-color: var(--brand-600);
-}
-
 /* Features */
 
 .tracking-wide {
@@ -102,7 +102,7 @@ h6,
   object-fit: cover;
 }
 
-/* Barre de progression : dégradé orange -> vert */
+/* Barre de progression */
 
 .progress {
   height: 6px;
@@ -112,7 +112,7 @@ h6,
   background: linear-gradient(90deg, #f59e0b, #16a34a);
 }
 
-/* Bouton : contour vert, fond vert au survol */
+/* Bouton hover */
 
 .btn-outline-success {
   --bs-btn-color: #15803d;

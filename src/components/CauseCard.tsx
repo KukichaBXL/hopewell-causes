@@ -1,7 +1,7 @@
 import type { Cause } from "../types";
 
 export default function CauseCard({ cause }: { cause: Cause }) {
-  // largeur de la barre : raised / goal, 100 % maximum
+  // Calcul état / goal
   const percent = Math.min(100, (cause.raised / cause.goal) * 100);
 
   return (
@@ -23,9 +23,9 @@ export default function CauseCard({ cause }: { cause: Cause }) {
 
         <div className="d-flex justify-content-between small mb-3">
           <strong className="text-success-emphasis">
-            ${cause.raised} raised
+            ${Intl.NumberFormat("en-US").format(cause.raised)} raised
           </strong>
-          <span>of ${cause.goal}</span>
+          <span>of ${Intl.NumberFormat("en-US").format(cause.goal)}</span>
         </div>
 
         <button
