@@ -1,4 +1,5 @@
 import type { Cause } from "../types";
+import { useState } from "react";
 
 export default function CauseCard({ cause }: { cause: Cause }) {
   // Calcul état / goal

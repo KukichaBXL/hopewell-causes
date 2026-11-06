@@ -1,6 +1,7 @@
 import { causes } from "../data/causes";
 import SectionTitle from "./SectionTitle";
 import CauseCard from "./CauseCard";
+import { useState } from "react";
 
 export default function Causes() {
   return (
