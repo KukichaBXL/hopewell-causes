@@ -1,15 +1,12 @@
 import Navbar from "./components/Navbar";
-import Features from "./components/Features";
-import CauseCard from "./components/CauseCard";
-import { causes } from "./data/causes";
+import Causes from "./components/Causes";
 
 function App() {
   return (
     <>
       <Navbar />
       <main>
-        <Features />
-        <CauseCard cause={causes[0]} />
+        <Causes />
       </main>
     </>
   );

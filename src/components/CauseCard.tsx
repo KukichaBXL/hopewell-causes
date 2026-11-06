@@ -1,42 +1,37 @@
 import type { Cause } from "../types";
-import Badge from "./Badge";
-import ProgressBar from "./ProgressBar";
-
-const usd = new Intl.NumberFormat("en-US", {
-  style: "currency",
-  currency: "USD",
-  maximumFractionDigits: 0,
-});
 
 export default function CauseCard({ cause }: { cause: Cause }) {
+  // largeur de la barre : raised / goal, 100 % maximum
+  const percent = Math.min(100, (cause.raised / cause.goal) * 100);
+
   return (
-    <article className="card h-100 bg-white border-0 rounded-4 shadow-sm card-hover overflow-hidden">
-      <div className="position-relative cause-media">
-        <img
-          src={cause.image}
-          alt={cause.title}
-          className="cause-img"
-          loading="lazy"
-        />
-        <Badge variant="light" className="position-absolute top-0 start-0 m-2">
+    <article className="card cause-card h-100 bg-white border-0 shadow-sm">
+      <div className="position-relative">
+        <img src={cause.image} alt={cause.title} className="cause-img" />
+        <span className="badge rounded-pill bg-white text-success-emphasis position-absolute top-0 start-0 m-2 px-3 py-2">
           {cause.category}
-        </Badge>
+        </span>
       </div>
 
-      <div className="card-body p-4">
-        <h3 className="h5 fw-bold mb-2">{cause.title}</h3>
-        <p className="small mb-3">{cause.description}</p>
+      <div className="card-body d-flex flex-column p-4">
+        <h3 className="h5 fw-bold">{cause.title}</h3>
+        <p className="small">{cause.description}</p>
 
-        <div className="mb-2">
-          <ProgressBar value={cause.raised} max={cause.goal} />
+        <div className="progress mb-2">
+          <div className="progress-bar" style={{ width: `${percent}%` }}></div>
         </div>
 
         <div className="d-flex justify-content-between small mb-3">
-          <strong className="text-success">{usd.format(cause.raised)} raised</strong>
-          <span>of {usd.format(cause.goal)}</span>
+          <strong className="text-success-emphasis">
+            ${cause.raised} raised
+          </strong>
+          <span>of ${cause.goal}</span>
         </div>
 
-        <button type="button" className="btn btn-outline-success rounded-pill w-100 fw-semibold">
+        <button
+          type="button"
+          className="btn btn-outline-success rounded-pill fw-semibold w-100 mt-auto"
+        >
           Donate to this cause
         </button>
       </div>

@@ -8,7 +8,7 @@
   --font-title: "Poppins", system-ui, sans-serif;
 
   /* Les variables de Bootstrap, redéfinies */
-  --bs-body-font-family: "Nunito Sans", system-ui, sans-serif;
+  --bs-body-font-family: "Poppins", system-ui, sans-serif;
   --bs-body-bg: #f7f8fa;
   --bs-body-color: #4b5563;
   --bs-heading-color: #0f172a;
@@ -80,22 +80,45 @@ h6,
   letter-spacing: -0.02em;
 }
 
-/* Causes */
+/* Cartes */
+
+.cause-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.cause-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.12) !important;
+}
 
 .cause-img {
   display: block;
   width: 100%;
-  height: 190px;
+  height: 240px;
   object-fit: cover;
-  background: #e5e7eb;
 }
 
-.cause-progress {
+/* Barre de progression : dégradé orange -> vert */
+
+.progress {
   height: 6px;
-  background: #eef0f3;
 }
 
-.cause-progress .progress-bar {
-  background: linear-gradient(90deg, #f59e0b, var(--brand-500));
-  border-radius: 999px;
+.progress-bar {
+  background: linear-gradient(90deg, #f59e0b, #16a34a);
+}
+
+/* Bouton : contour vert, fond vert au survol */
+
+.btn-outline-success {
+  --bs-btn-color: #15803d;
+  --bs-btn-border-color: #16a34a;
+  --bs-btn-hover-bg: #16a34a;
+  --bs-btn-hover-border-color: #16a34a;
+  --bs-btn-active-bg: #15803d;
+  --bs-btn-active-border-color: #15803d;
 }
